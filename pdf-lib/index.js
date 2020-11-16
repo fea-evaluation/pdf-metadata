@@ -21,7 +21,7 @@ PDFDocument.create().then((pdfDoc) => {
     });
 
     pdfDoc.save().then((pdfBytes) => {
-      writeFile("../resources/pdf-lib.no-metadata.pdf", pdfBytes, { encoding: "utf-8" }, console.error);
+      writeFile("../resources/no-metadata.pdf-lib.pdf", pdfBytes, { encoding: "utf-8" }, console.error);
     });
   });
 });
