@@ -1,7 +1,12 @@
-const JsPdf = require("jspdf");
+const { jsPDF } = require("jspdf");
 
 const addModules = require("./modules");
 
-const ModifiedJspPdf = addModules(JsPdf);
+class ModifiedJspPdf extends jsPDF {
+  constructor(...options) {
+    super(...options);
+    addModules(this);
+  }
+}
 
 module.exports = ModifiedJspPdf;
