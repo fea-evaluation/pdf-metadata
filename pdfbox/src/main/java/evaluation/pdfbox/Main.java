@@ -7,7 +7,7 @@ import java.io.*;
 import java.nio.file.Paths;
 
 public class Main {
-  private static final String[] filePaths = new String[] { "valid.pdf", "metadata.jspdf.pdf", "pre-signature.pdf", "post-signature.pdf" };
+  private static final String[] filePaths = new String[] { "1_prepared-for-signature.pdf", "post-signature_it_works.pdf" };
 
   public static void main(String[] args) {
     for (String filePath : filePaths) {
