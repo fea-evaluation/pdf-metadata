@@ -7,12 +7,13 @@ import java.io.*;
 import java.nio.file.Paths;
 
 public class Main {
-  private static final String[] filePaths = new String[] { "valid.pdf", "no-metadata.pdf-lib.pdf" };
+  private static final String[] filePaths = new String[] { "valid.pdf", "no-metadata.pdf-lib.pdf",
+      "no-metadata.jspdf.pdf", "metadata.jspdf.pdf" };
 
   public static void main(String[] args) {
     for (String filePath : filePaths) {
       try {
-        File file = Paths.get("resources", filePath).toFile();
+        File file = Paths.get("..","resources", filePath).toFile();
         System.out.println();
         System.out.println(filePath + " -> " + file.getAbsolutePath());
         readMetadata(file);
